@@ -7,12 +7,13 @@ import (
 )
 
 func handleStart(c telebot.Context) error {
-	return c.Send("Привет, котик ❤️. " +
-		"\nНажимай кнопочки из меню и поднимай себе настроение: " +
-		"\n\n/compliments — команда для получения комплимента (ты, кстати, сегодня классно выглядишь). " +
-		"\n\n/motivations — команда для поднятия мотивации (твои мечты обязательно сбудутся). " +
-		"\n\n/dreams — команда, где будут мои влажные мечты (у меня пубертат). " +
-		"\n\nЯ буду обновлять бота, но пока все так.\n\nТвой Максимчик 💋")
+	return c.Send("Привет, котик ❤️. "+
+		"\nНажимай кнопочки из меню и поднимай себе настроение: "+
+		"\n\n/compliments — команда для получения комплимента (ты, кстати, сегодня классно выглядишь). "+
+		"\n\n/motivations — команда для поднятия мотивации (твои мечты обязательно сбудутся). "+
+		"\n\n/dreams — команда, где будут мои влажные мечты (у меня пубертат). "+
+		"\n\nЯ буду обновлять бота, но пока все так.\n\nТвой Максимчик 💋",
+		AskLoveKeyboard())
 }
 
 func handleCompliments(c telebot.Context) error {
@@ -48,7 +49,7 @@ func handleCompliments(c telebot.Context) error {
 	randomIndex := rand.Intn(len(compliments))
 	randomCompliment := compliments[randomIndex]
 
-	return c.Send(randomCompliment)
+	return c.Send(randomCompliment, AskLoveKeyboard())
 }
 
 func handleDreams(c telebot.Context) error {
@@ -67,7 +68,7 @@ func handleDreams(c telebot.Context) error {
 	randomIndex := rand.Intn(len(dreams))
 	randomDream := dreams[randomIndex]
 
-	return c.Send(randomDream)
+	return c.Send(randomDream, AskLoveKeyboard())
 }
 
 func handleMotivation(c telebot.Context) error {
@@ -92,10 +93,23 @@ func handleMotivation(c telebot.Context) error {
 		"Пробуй, даже если страшно. Я буду болеть за тебя ✨",
 		"Я твой самый большой фанат ✨",
 		"Горжусь тобой, просто потому что ты есть ✨",
+		"Ты умница ✨",
 	}
 
 	randomIndex := rand.Intn(len(motivations))
 	randomMotivation := motivations[randomIndex]
 
-	return c.Send(randomMotivation)
+	return c.Send(randomMotivation, AskLoveKeyboard())
+}
+
+func handleLoveQuestion(c telebot.Context) error {
+	return c.Send("Ты меня любишь, пупс? 🤔", LoveQuestionKeyboard())
+}
+
+func handleYes(c telebot.Context) error {
+	return c.Send("Лер, ты мне тоже нравишься ❤️", RemoveKeyboard())
+}
+
+func handleNo(c telebot.Context) error {
+	return c.Send("динаху 😒", RemoveKeyboard())
 }
