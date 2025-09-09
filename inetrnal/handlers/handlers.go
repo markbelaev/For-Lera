@@ -10,4 +10,5 @@ func registerCommands(b *telebot.Bot) {
 	b.Handle("/start", handleStart)
 	b.Handle("/compliments", handleCompliments)
 	b.Handle("/dreams", handleDreams)
+	b.Handle("/motivations", handleMotivation)
 }
