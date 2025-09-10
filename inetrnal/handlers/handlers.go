@@ -15,4 +15,6 @@ func registerCommands(b *telebot.Bot) {
 	b.Handle("Ты меня любишь?", handleLoveQuestion)
 	b.Handle("ДА!", handleYes)
 	b.Handle("не", handleNo)
+
+	b.Handle("Сколько мы знакомы", handleTimeLove)
 }

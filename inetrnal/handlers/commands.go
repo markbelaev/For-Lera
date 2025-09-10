@@ -49,3 +49,7 @@ func handleYes(c telebot.Context) error {
 func handleNo(c telebot.Context) error {
 	return c.Send("динаху 😒", RemoveKeyboard())
 }
+
+func handleTimeLove(c telebot.Context) error {
+	return c.Send("Если честно сам не знаю((( \n\n Потом посчитаю", RemoveKeyboard())
+}
