@@ -7,29 +7,29 @@ func MenuKeyboard() *telebot.ReplyMarkup {
 		ResizeKeyboard: true,
 	}
 
-	btnAslLoveMe := menuKeyboard.Text("Ты меня любишь?")
+	btnTestLoveKeyboard := menuKeyboard.Text("Ты меня любишь?")
 	btnTimeLove := menuKeyboard.Text("Сколько мы знакомы")
 
 	menuKeyboard.Reply(
-		menuKeyboard.Row(btnAslLoveMe, btnTimeLove),
+		menuKeyboard.Row(btnTestLoveKeyboard, btnTimeLove),
 	)
 
 	return menuKeyboard
 }
 
-func LoveQuestionKeyboard() *telebot.ReplyMarkup {
-	loveQuestionKeyboard := &telebot.ReplyMarkup{
+func TestLoveKeyboard() *telebot.ReplyMarkup {
+	testLoveKeyboard := &telebot.ReplyMarkup{
 		ResizeKeyboard: true,
 	}
 
-	btnYes := loveQuestionKeyboard.Text("ДА!")
-	btnNo := loveQuestionKeyboard.Text("не")
+	btnYes := testLoveKeyboard.Text("ДА!")
+	btnNo := testLoveKeyboard.Text("не")
 
-	loveQuestionKeyboard.Reply(
-		loveQuestionKeyboard.Row(btnYes, btnNo),
+	testLoveKeyboard.Reply(
+		testLoveKeyboard.Row(btnYes, btnNo),
 	)
 
-	return loveQuestionKeyboard
+	return testLoveKeyboard
 }
 
 func RemoveKeyboard() *telebot.ReplyMarkup {

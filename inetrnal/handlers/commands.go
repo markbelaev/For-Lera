@@ -39,7 +39,7 @@ func handleDreams(c telebot.Context) error {
 }
 
 func handleLoveQuestion(c telebot.Context) error {
-	return c.Send("Ты меня любишь, пупс? 🤔", LoveQuestionKeyboard())
+	return c.Send("Ты меня любишь, пупс? 🤔", TestLoveKeyboard())
 }
 
 func handleYes(c telebot.Context) error {
