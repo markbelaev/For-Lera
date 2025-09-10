@@ -14,28 +14,28 @@ func handleStart(c telebot.Context) error {
 		"\n\n/motivations — команда для поднятия мотивации (твои мечты обязательно сбудутся). "+
 		"\n\n/dreams — команда, где будут мои влажные мечты (у меня пубертат). "+
 		"\n\nЯ буду обновлять бота, но пока все так.\n\nТвой Максимчик 💋",
-		AskLoveKeyboard())
+		MenuKeyboard())
 }
 
 func handleCompliments(c telebot.Context) error {
 	randomIndex := rand.Intn(len(data.Compliments))
 	randomCompliment := data.Compliments[randomIndex]
 
-	return c.Send(randomCompliment, AskLoveKeyboard())
+	return c.Send(randomCompliment, MenuKeyboard())
 }
 
 func handleMotivation(c telebot.Context) error {
 	randomIndex := rand.Intn(len(data.Motivations))
 	randomMotivation := data.Motivations[randomIndex]
 
-	return c.Send(randomMotivation, AskLoveKeyboard())
+	return c.Send(randomMotivation, MenuKeyboard())
 }
 
 func handleDreams(c telebot.Context) error {
 	randomIndex := rand.Intn(len(data.Dreams))
 	randomDream := data.Dreams[randomIndex]
 
-	return c.Send(randomDream, AskLoveKeyboard())
+	return c.Send(randomDream, MenuKeyboard())
 }
 
 func handleLoveQuestion(c telebot.Context) error {
@@ -43,13 +43,13 @@ func handleLoveQuestion(c telebot.Context) error {
 }
 
 func handleYes(c telebot.Context) error {
-	return c.Send("Ты мне тоже нравишься ❤️", RemoveKeyboard())
+	return c.Send("Ты мне тоже нравишься ❤️", MenuKeyboard())
 }
 
 func handleNo(c telebot.Context) error {
-	return c.Send("динаху 😒", RemoveKeyboard())
+	return c.Send("динаху 😒", MenuKeyboard())
 }
 
 func handleTimeLove(c telebot.Context) error {
-	return c.Send("Если честно сам не знаю((( \n\n Потом посчитаю", RemoveKeyboard())
+	return c.Send("Если честно сам не знаю((( \n\n Потом посчитаю", MenuKeyboard())
 }

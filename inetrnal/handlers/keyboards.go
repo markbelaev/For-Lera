@@ -2,18 +2,19 @@ package handlers
 
 import "gopkg.in/telebot.v4"
 
-func AskLoveKeyboard() *telebot.ReplyMarkup {
-	askLoveKeyboard := &telebot.ReplyMarkup{
+func MenuKeyboard() *telebot.ReplyMarkup {
+	menuKeyboard := &telebot.ReplyMarkup{
 		ResizeKeyboard: true,
 	}
 
-	btnLoveMe := askLoveKeyboard.Text("Ты меня любишь?")
+	btnAslLoveMe := menuKeyboard.Text("Ты меня любишь?")
+	btnTimeLove := menuKeyboard.Text("Сколько мы знакомы")
 
-	askLoveKeyboard.Reply(
-		askLoveKeyboard.Row(btnLoveMe),
+	menuKeyboard.Reply(
+		menuKeyboard.Row(btnAslLoveMe, btnTimeLove),
 	)
 
-	return askLoveKeyboard
+	return menuKeyboard
 }
 
 func LoveQuestionKeyboard() *telebot.ReplyMarkup {
@@ -29,20 +30,6 @@ func LoveQuestionKeyboard() *telebot.ReplyMarkup {
 	)
 
 	return loveQuestionKeyboard
-}
-
-func TimeLoveKeyboard() *telebot.ReplyMarkup {
-	timeLoveKeyboard := &telebot.ReplyMarkup{
-		ResizeKeyboard: true,
-	}
-
-	btnTimeLove := timeLoveKeyboard.Text("Сколько мы знакомы")
-
-	timeLoveKeyboard.Reply(
-		timeLoveKeyboard.Row(btnTimeLove),
-	)
-
-	return timeLoveKeyboard
 }
 
 func RemoveKeyboard() *telebot.ReplyMarkup {
