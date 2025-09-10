@@ -5,8 +5,6 @@
 ![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-Персональный Telegram-бот для поднятия настроения с комплиментами, мотивацией и игривым флиртом.
-
 ## ✨ Возможности
 
 ### 💌 Случайные комплименты
