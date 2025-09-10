@@ -9,12 +9,16 @@ func RegisterAll(b *telebot.Bot) {
 func registerCommands(b *telebot.Bot) {
 	b.Handle("/start", handleStart)
 	b.Handle("/compliments", handleCompliments)
-	b.Handle("/dreams", handleDreams)
 	b.Handle("/motivations", handleMotivation)
+	b.Handle("/dreams", handleDreams)
 
-	b.Handle("Ты меня любишь?", handleLoveQuestion)
-	b.Handle("ДА!", handleYes)
-	b.Handle("не", handleNo)
+	b.Handle("❤️", handleCompliments)
+	b.Handle("✨", handleMotivation)
+	b.Handle("💫", handleDreams)
 
-	b.Handle("Сколько мы знакомы", handleTimeLove)
+	b.Handle("Ты меня любишь? 🤔", handleLoveQuestion)
+	b.Handle("ДА! 🙂‍↕️", handleYes)
+	b.Handle("не 🙂‍↔️", handleNo)
+
+	b.Handle("Сколько знакомы ⏰", handleTimeLove)
 }
