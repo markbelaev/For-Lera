@@ -1,4 +1,4 @@
-# Марк - Telegram бот для поднятия настроения 💖
+# CUTE - Telegram бот для жидких моментов 💖
 
 ![Go](https://img.shields.io/badge/Go-1.21+-00ADD8?style=for-the-badge&logo=go)
 ![Telegram](https://img.shields.io/badge/Telegram-Bot-2CA5E0?style=for-the-badge&logo=telegram)
@@ -20,9 +20,6 @@
 
 ### ❤️ Интерактивное меню
 Удобные кнопки для быстрой навигации
-
-### 🤔 Интерактивный опрос
-Игра в вопросы о чувствах
 
 ### 📊 Логирование
 Детальное логирование всех действий бота
@@ -48,10 +45,3 @@
 ```env
 # Telegram Bot Token from @BotFather
 TOKEN_BOT=your_telegram_bot_token_here
-
-# Optional: Log level (debug, info, warn, error)
-LOG_LEVEL=info
-
-# Optional: Bot settings
-BOT_NAME=Марк
-BOT_ADMIN_ID=your_telegram_id
