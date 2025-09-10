@@ -97,7 +97,7 @@ func handleNoLoveTest(c telebot.Context) error {
 func handleTimeLove(c telebot.Context) error {
 	slog.Info("Успешная обработка кнопки time love!")
 
-	return c.Send("Мы знакомы ≈ 5 дней \n\n Успела ли ты разочароваться?", TestTimeLoveKeyboard())
+	return c.Send("Мы знакомы ≈ 5 дней. \nУспела ли ты разочароваться?", TestTimeLoveKeyboard())
 }
 
 // Обработчик для копки yes love time test
