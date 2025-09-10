@@ -53,6 +53,21 @@ func TestLoveKeyboard() *telebot.ReplyMarkup {
 
 // Функция для закрытия reply клавиатуры
 
+func TestTimeLoveKeyboard() *telebot.ReplyMarkup {
+	testTimeLoveKeyboard := &telebot.ReplyMarkup{
+		ResizeKeyboard: true,
+	}
+
+	btnYes := testTimeLoveKeyboard.Text("ДА!!! ✅")
+	btnNo := testTimeLoveKeyboard.Text("нет ❌")
+
+	testTimeLoveKeyboard.Reply(
+		testTimeLoveKeyboard.Row(btnYes, btnNo),
+	)
+
+	return testTimeLoveKeyboard
+}
+
 func RemoveKeyboard() *telebot.ReplyMarkup {
 	return &telebot.ReplyMarkup{
 		RemoveKeyboard: true,

@@ -31,12 +31,14 @@ func registerCommands(b *telebot.Bot) {
 	// Обработчики для love test
 
 	b.Handle("Ты меня любишь? 🤔", handleLoveQuestion)
-	b.Handle("ДА! 🙂‍↕️", handleYes)
-	b.Handle("не 🙂‍↔️", handleNo)
+	b.Handle("ДА! 🙂‍↕️", handleYesLoveTest)
+	b.Handle("не 🙂‍↔️", handleNoLoveTest)
 
-	// Остальные обработчики
+	// Обработчики для love time test
 
 	b.Handle("Сколько знакомы ⏰", handleTimeLove)
+	b.Handle("ДА!!! ✅", handleYesLoveTimeTest)
+	b.Handle("нет ❌", handleNoLoveTimeTest)
 }
 
 // Обработчик неизвестных текстовых сообщений

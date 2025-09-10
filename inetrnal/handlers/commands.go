@@ -78,18 +78,18 @@ func handleLoveQuestion(c telebot.Context) error {
 
 // Обработчик если на тест ответили "да"
 
-func handleYes(c telebot.Context) error {
-	slog.Info("Успешная обработка кнопки yes!")
+func handleYesLoveTest(c telebot.Context) error {
+	slog.Info("Успешная обработка кнопки yes love test!")
 
 	return c.Send("Ты мне тоже нравишься ❤️", MenuKeyboard())
 }
 
 // Обработчик есди на тест ответили "нет"
 
-func handleNo(c telebot.Context) error {
-	slog.Info("Успешная обработка кнопки no!")
+func handleNoLoveTest(c telebot.Context) error {
+	slog.Info("Успешная обработка кнопки no love test!")
 
-	return c.Send("динаху 😒", MenuKeyboard())
+	return c.Send("анлак 😞", MenuKeyboard())
 }
 
 // Обработчик на копку "сколько закомы"
@@ -97,8 +97,26 @@ func handleNo(c telebot.Context) error {
 func handleTimeLove(c telebot.Context) error {
 	slog.Info("Успешная обработка кнопки time love!")
 
-	return c.Send("Если честно сам не знаю((( \n\n Потом посчитаю", MenuKeyboard())
+	return c.Send("Мы знакомы ≈ 5 дней \n\n Успела ли ты разочароваться?", TestTimeLoveKeyboard())
 }
+
+// Обработчик для копки yes love time test
+
+func handleYesLoveTimeTest(c telebot.Context) error {
+	slog.Info("Успешная обработка кнопки yes love time test!")
+
+	return c.Send("Прости меня... 😞", MenuKeyboard())
+}
+
+// Обработчик для копки no love time test
+
+func handleNoLoveTimeTest(c telebot.Context) error {
+	slog.Info("Успешная обработка кнопки no love time test!")
+
+	return c.Send("Милая, я тоже в тебе ни разу не разочаровался 💋", MenuKeyboard())
+}
+
+// Обработчики для неизвестных текстовых сообщений
 
 func handleAnyMessages(c telebot.Context) error {
 	userMessage := c.Text()
