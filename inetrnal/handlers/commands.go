@@ -88,3 +88,11 @@ func handleTimeLove(c telebot.Context) error {
 
 	return c.Send("Если честно сам не знаю((( \n\n Потом посчитаю", MenuKeyboard())
 }
+
+func handleAnyMessages(c telebot.Context) error {
+	userMessage := c.Text()
+
+	slog.Info(userMessage)
+
+	return c.Send("Не понимаю о чем ты 🤷‍♂️", MenuKeyboard())
+}
