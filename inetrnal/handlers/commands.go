@@ -14,7 +14,7 @@ func handleStart(c telebot.Context) error {
 
 	// Логируем успешную обработку
 
-	slog.Info("Успешня обработка /start!")
+	slog.Info("Успешня обработка комманды /start!")
 
 	// Возвращаем ответ
 
@@ -25,7 +25,7 @@ func handleStart(c telebot.Context) error {
 // Обработчик команды /compliments
 
 func handleCompliments(c telebot.Context) error {
-	slog.Info("Успешня обработка /compliments!")
+	slog.Info("Успешня обработка комманды /compliments!")
 
 	//Достаем из data список нужных сообщений и присылаем рандомное
 
@@ -38,7 +38,7 @@ func handleCompliments(c telebot.Context) error {
 // Обработчик команды /motivations
 
 func handleMotivation(c telebot.Context) error {
-	slog.Info("Успешня обработка /motivations!")
+	slog.Info("Успешня обработка комманды /motivations!")
 
 	randomIndex := rand.Intn(len(data.Motivations))
 	randomMotivation := data.Motivations[randomIndex]
@@ -49,7 +49,7 @@ func handleMotivation(c telebot.Context) error {
 // Обработчик команды /dreams
 
 func handleDreams(c telebot.Context) error {
-	slog.Info("Успешня обработка /dreams!")
+	slog.Info("Успешня обработка комманды /dreams!")
 
 	randomIndex := rand.Intn(len(data.Dreams))
 	randomDream := data.Dreams[randomIndex]
