@@ -32,6 +32,8 @@ func Load() *Config {
 		os.Exit(1)
 	}
 
+	// Возвращаем структуру с конфигом
+
 	return &Config{
 		TokenBot: tokenBot,
 	}
