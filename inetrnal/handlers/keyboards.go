@@ -28,6 +28,8 @@ func MenuKeyboard() *telebot.ReplyMarkup {
 		menuKeyboard.Row(btnCompliments, btnMotivations, btnDreams),
 	)
 
+	// Возвращаем клавиатуру
+
 	return menuKeyboard
 }
 
