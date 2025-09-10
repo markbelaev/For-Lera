@@ -2,9 +2,13 @@ package handlers
 
 import "gopkg.in/telebot.v4"
 
+// Функция регистрации всх обработчиков
+
 func RegisterAll(b *telebot.Bot) {
 	registerCommands(b)
 }
+
+// Хендлеры
 
 func registerCommands(b *telebot.Bot) {
 	b.Handle("/start", handleStart)

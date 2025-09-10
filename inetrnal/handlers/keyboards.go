@@ -2,10 +2,17 @@ package handlers
 
 import "gopkg.in/telebot.v4"
 
+// Клавиатура главного меню
+
 func MenuKeyboard() *telebot.ReplyMarkup {
+
+	// Инициализируем reply клавиатуру
+
 	menuKeyboard := &telebot.ReplyMarkup{
 		ResizeKeyboard: true,
 	}
+
+	// Инициализируем кнопки клавиатуры
 
 	btnTestLoveKeyboard := menuKeyboard.Text("Ты меня любишь? 🤔")
 	btnTimeLove := menuKeyboard.Text("Сколько знакомы ⏰")
@@ -14,6 +21,8 @@ func MenuKeyboard() *telebot.ReplyMarkup {
 	btnMotivations := menuKeyboard.Text("✨")
 	btnDreams := menuKeyboard.Text("💫")
 
+	// Ставим кнопки в ряд
+
 	menuKeyboard.Reply(
 		menuKeyboard.Row(btnTestLoveKeyboard, btnTimeLove),
 		menuKeyboard.Row(btnCompliments, btnMotivations, btnDreams),
@@ -21,6 +30,8 @@ func MenuKeyboard() *telebot.ReplyMarkup {
 
 	return menuKeyboard
 }
+
+// Клавматура для проверки чувств
 
 func TestLoveKeyboard() *telebot.ReplyMarkup {
 	testLoveKeyboard := &telebot.ReplyMarkup{
@@ -36,6 +47,8 @@ func TestLoveKeyboard() *telebot.ReplyMarkup {
 
 	return testLoveKeyboard
 }
+
+// Функция для закрытия reply клавиатуры
 
 func RemoveKeyboard() *telebot.ReplyMarkup {
 	return &telebot.ReplyMarkup{
