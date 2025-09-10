@@ -57,6 +57,17 @@ func handleDreams(c telebot.Context) error {
 	return c.Send(randomDream, MenuKeyboard())
 }
 
+// Обработчик грустных сообщений
+
+func handleSad(c telebot.Context) error {
+	slog.Info("Успешня обработка комманды /sad!")
+
+	randomIndex := rand.Intn(len(data.Sad))
+	randomSad := data.Sad[randomIndex]
+
+	return c.Send(randomSad, MenuKeyboard())
+}
+
 // Обработчик для проверки чувств
 
 func handleLoveQuestion(c telebot.Context) error {

@@ -20,12 +20,13 @@ func MenuKeyboard() *telebot.ReplyMarkup {
 	btnCompliments := menuKeyboard.Text("❤️")
 	btnMotivations := menuKeyboard.Text("✨")
 	btnDreams := menuKeyboard.Text("💫")
+	btnSad := menuKeyboard.Text("😢")
 
 	// Ставим кнопки в ряд
 
 	menuKeyboard.Reply(
 		menuKeyboard.Row(btnTestLoveKeyboard, btnTimeLove),
-		menuKeyboard.Row(btnCompliments, btnMotivations, btnDreams),
+		menuKeyboard.Row(btnCompliments, btnMotivations, btnDreams, btnSad),
 	)
 
 	// Возвращаем клавиатуру

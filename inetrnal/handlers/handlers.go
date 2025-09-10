@@ -19,12 +19,14 @@ func registerCommands(b *telebot.Bot) {
 	b.Handle("/compliments", handleCompliments)
 	b.Handle("/motivations", handleMotivation)
 	b.Handle("/dreams", handleDreams)
+	b.Handle("/sad", handleSad)
 
 	// Обработчики для алиасов комманд
 
 	b.Handle("❤️", handleCompliments)
 	b.Handle("✨", handleMotivation)
 	b.Handle("💫", handleDreams)
+	b.Handle("😢", handleSad)
 
 	// Обработчики для love test
 
