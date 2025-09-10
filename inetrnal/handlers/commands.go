@@ -24,18 +24,18 @@ func handleCompliments(c telebot.Context) error {
 	return c.Send(randomCompliment, AskLoveKeyboard())
 }
 
-func handleDreams(c telebot.Context) error {
-	randomIndex := rand.Intn(len(data.Dreams))
-	randomDream := data.Dreams[randomIndex]
-
-	return c.Send(randomDream, AskLoveKeyboard())
-}
-
 func handleMotivation(c telebot.Context) error {
 	randomIndex := rand.Intn(len(data.Motivations))
 	randomMotivation := data.Motivations[randomIndex]
 
 	return c.Send(randomMotivation, AskLoveKeyboard())
+}
+
+func handleDreams(c telebot.Context) error {
+	randomIndex := rand.Intn(len(data.Dreams))
+	randomDream := data.Dreams[randomIndex]
+
+	return c.Send(randomDream, AskLoveKeyboard())
 }
 
 func handleLoveQuestion(c telebot.Context) error {
