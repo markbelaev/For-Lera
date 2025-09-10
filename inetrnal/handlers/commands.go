@@ -92,7 +92,7 @@ func handleTimeLove(c telebot.Context) error {
 func handleAnyMessages(c telebot.Context) error {
 	userMessage := c.Text()
 
-	slog.Info(userMessage)
+	slog.Info("Неизвестное сообщение: ", userMessage)
 
 	return c.Send("Не понимаю о чем ты 🤷‍♂️", MenuKeyboard())
 }
