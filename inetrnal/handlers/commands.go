@@ -43,7 +43,7 @@ func handleLoveQuestion(c telebot.Context) error {
 }
 
 func handleYes(c telebot.Context) error {
-	return c.Send("Лер, ты мне тоже нравишься ❤️", RemoveKeyboard())
+	return c.Send("Ты мне тоже нравишься ❤️", RemoveKeyboard())
 }
 
 func handleNo(c telebot.Context) error {
