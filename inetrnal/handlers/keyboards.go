@@ -34,7 +34,7 @@ func MenuKeyboard() *telebot.ReplyMarkup {
 	return menuKeyboard
 }
 
-// Клавматура для проверки чувств
+// Клавиатура для проверки чувств
 
 func TestLoveKeyboard() *telebot.ReplyMarkup {
 	testLoveKeyboard := &telebot.ReplyMarkup{
@@ -51,7 +51,7 @@ func TestLoveKeyboard() *telebot.ReplyMarkup {
 	return testLoveKeyboard
 }
 
-// Функция для закрытия reply клавиатуры
+// Клавиатура для проверки сколько времени вы вместе
 
 func TestTimeLoveKeyboard() *telebot.ReplyMarkup {
 	testTimeLoveKeyboard := &telebot.ReplyMarkup{
@@ -67,6 +67,8 @@ func TestTimeLoveKeyboard() *telebot.ReplyMarkup {
 
 	return testTimeLoveKeyboard
 }
+
+// Функция закрытия клавиатуры
 
 func RemoveKeyboard() *telebot.ReplyMarkup {
 	return &telebot.ReplyMarkup{
